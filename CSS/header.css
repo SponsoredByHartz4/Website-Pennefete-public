@@ -1,0 +1,142 @@
+@font-face {
+  font-family: oswald;
+  src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+:root {
+  --Hintergrundfarbe: #450692;
+  font-family: oswald;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Wrapper */
+
+.wrapper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper-header,
+.wrapper-menu {
+  width: clamp(15.625rem, 80%, 62.5rem);
+}
+
+/* Header */
+
+header {
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Hintergrundfarbe);
+  text-transform: uppercase;
+}
+
+.MainHeadings h2 {
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.MainHeadings {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(to top, #fa14fb 0%, #f647fe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Burger-Menu */
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  background: none;
+}
+
+.menu-btn_burger {
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+  transform: translateY(16px);
+}
+
+/* Animation - Burger-Menu*/
+
+.menu-btn.button-open .menu-btn_burger {
+  background: transparent;
+}
+
+.menu-btn.button-open .menu-btn_burger::before {
+  transform: rotate(45deg);
+}
+
+.menu-btn.button-open .menu-btn_burger::after {
+  transform: rotate(-45deg);
+}
+
+/* Menu - Burger-Menu */
+
+header nav {
+  position: absolute;
+  left: 0;
+  top: 6.25rem;
+  background-color: var(--Hintergrundfarbe);
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  font-size: 1.125rem;
+  box-sizing: border-box;
+  border-top: 1px #fff solid;
+}
+
+header nav ul li {
+  height: 5rem;
+}
+
+header nav ul li:nth-child(1) {
+  margin-top: 3.875rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}

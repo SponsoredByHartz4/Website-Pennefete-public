@@ -1,0 +1,67 @@
+@font-face {
+  font-family: oswald;
+  src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+:root {
+  --Hintergrundfarbe: #450692;
+  font-family: oswald;
+}
+
+footer {
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Hintergrundfarbe);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(15.625rem, 80%, 62.5rem);
+}
+
+main {
+  background-image: url(../images/JPEG/Disco-Hands-Bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 12.5rem);
+  margin-top: 100px;
+}
+
+footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer nav a {
+  height: 4.375rem;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+footer nav a img {
+  position: relative;
+  height: 1.875rem;
+  width: auto;
+}
+
+footer nav a p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.625rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.9375rem;
+}
